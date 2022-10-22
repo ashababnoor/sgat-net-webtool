@@ -9,7 +9,7 @@
     <form class="my-form">
         {% csrf_token %}
       <p>Made with ❤️ by students of Group A2</p>
-      <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+      <input type="file" id="fileElem" multiple accept="image/*" onchange="uploadFile(this.files[0])">
       <label class="button" for="fileElem">Select some files</label>
     </form>
 </div>

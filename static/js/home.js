@@ -8,7 +8,7 @@ function preventDefaults(e) {
     e.stopPropagation()
 }
 
-;['dragenter', 'dragover'].forEach(eventName => {
+['dragenter', 'dragover'].forEach(eventName => {
     dropArea.addEventListener(eventName, highlight, false)
 })
 
@@ -32,6 +32,7 @@ function handleDrop(e) {
 
     uploadFile(files[0])
 }
+
 
 function uploadFile(file) {
     let url = '/upload/'
