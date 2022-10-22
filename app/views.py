@@ -14,6 +14,11 @@ class HomeView(View):
     def get(self, request, *args, **kwargs):
         return render(request, template_name=self.template_name)
 
+class ResultView(View):
+    template_name = 'result.html'
+    def get(self, request, *args, **kwargs):
+        return render(request, template_name=self.template_name)
+
 
 class HandleFiles(View):
     template_name = 'upload.html'

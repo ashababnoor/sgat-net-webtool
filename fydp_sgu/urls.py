@@ -24,6 +24,7 @@ urlpatterns = [
     path('', HomeView.as_view(), name='home'),
     path('upload/', HandleFiles.as_view(), name='upload'),
     path('proceed/<int:pk>', ProceedPromtView.as_view(), name='proceed'),
+    path('result/', ResultView.as_view(), name='result'),
 
 ]
 
