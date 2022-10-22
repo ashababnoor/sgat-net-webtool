@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/upload.css' %}">
+
+You uploaded -
+{{ file }}
+
+
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock content %}
