@@ -1,4 +1,5 @@
-from django.http import HttpResponse
+from telnetlib import STATUS
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.views.generic import View
 from django.core.files.storage import default_storage
@@ -6,6 +7,7 @@ from django.core.files.base import ContentFile
 from django.conf import settings
 import os
 import base64
+from .models import *
 
 class HomeView(View):
     template_name = 'home.html'
@@ -17,14 +19,12 @@ class HandleFiles(View):
     template_name = 'upload.html'
     def post(self, request, *args, **kwargs):
         image = request.FILES['file']
-        path = default_storage.save(image.name, ContentFile(image.read()))
-        tmp_file = os.path.join(settings.MEDIA_ROOT, path)
+        img_obj = Image.objects.create(**{ 'image' : image })
+        return JsonResponse({ 'id' : img_obj.id })
 
-        with open(tmp_file, 'rb') as f:
-           file_data = base64.b64encode(f.read()).decode('utf-8')
-
-        response = HttpResponse(file_data)
-        response['Content-Type'] = 'image/jpeg'
-        response['Content-Disposition'] = f'attachment; filename="{ image.name }"'
-        
-        return response
+class ProceedPromtView(View):
+    template_name = 'proceed.html'
+    def get(self, request, *args, **kwargs):
+        id = kwargs['pk']
+        img_obj = Image.objects.get(pk=id)
+        return render(request, template_name=self.template_name, context={'image' : img_obj})

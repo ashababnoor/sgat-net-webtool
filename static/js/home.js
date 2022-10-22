@@ -43,18 +43,7 @@ function uploadFile(file) {
     fetch(url, {
         method: 'POST',
         body: formData
+    }).then((res) => res.json()).then(data => {
+        window.location.href = '/proceed/' + data.id;
     })
-        .then((res) => {
-            // convert to Base64
-            let b64Response = btoa(res);
-            console.log(b64Response);
-
-            // create an image
-            let outputImg = document.createElement('img');
-            outputImg.src = 'data:image/png;base64,' + b64Response;
-
-            // append it to your page
-            document.body.appendChild(outputImg);
-        })
-        .catch(() => { /* Error. Inform the user */ })
 }

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/proceed.css' %}">
+
+<img src="{{ image.image.url }}" alt="" srcset="">
+
+<button>Proceed</button>
+{% endblock content %}
