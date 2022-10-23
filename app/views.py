@@ -19,6 +19,11 @@ class ResultView(View):
     def get(self, request, *args, **kwargs):
         return render(request, template_name=self.template_name)
 
+class AboutView(View):
+    template_name = 'about.html'
+    def get(self, request, *args, **kwargs):
+        return render(request, template_name=self.template_name)
+
 
 class HandleFiles(View):
     template_name = 'upload.html'
