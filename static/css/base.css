@@ -7,11 +7,64 @@
 
 :root {
     font-family: 'Roboto', sans-serif;
+    --div-radius: 1.25em;
 }
 
 body {
-    height: 100%;
     background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
 }
 
-.main-container {}
+.main-container {
+    margin: auto;
+    display: block;
+    width: 80ch;
+    border-radius: var(--div-radius);
+    overflow: hidden;
+    margin-top: 7em;
+}
+
+.glass-div {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    border-top-left-radius: var(--div-radius);
+    border-top-right-radius: var(--div-radius);
+    padding: 3em 5em;
+    text-align: center;
+    color: white;
+}
+
+.main-div {
+    background: white;
+    padding: 2em 5em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.main-div p {
+    color: grey;
+    text-align: center;
+}
+
+.bottom-div {
+    background: rgb(247, 247, 247);
+    padding: 1em 5em;
+    display: flex;
+    align-items: center;
+}
+
+.bottom-div p {
+    color: grey;
+    margin: auto;
+}
+
+.bottom-div kbd {
+    background: white;
+    border-color: hsl(0, 0%, 30%);
+    color: black;
+}
