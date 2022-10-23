@@ -2,27 +2,29 @@
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 
 
-<div id="drop-area" class="main-container">
-    <div class="glass-div">
-        <h1 class="mono-text">Scene Description Generator</h1>
-        <p>Made with ❤️ by students of Group A2 </p>
-    </div>
-    <div class="main-div">
-        <div>
-            <form action="" class="my-form">
-                {% csrf_token %}
-                <input type="file" id="fileElem" multiple accept="image/*" onchange="uploadFile(this.files[0])">
-                <label class="file-button" for="fileElem">
+<div class="row-section main-section">
+    <div id="drop-area" class="main-container">
+        <div class="glass-div">
+            <h1 class="mono-text">Scene Description Generator</h1>
+            <p>Made with ❤️ by students of Group A2 </p>
+        </div>
+        <div class="main-div">
+            <div>
+                <form action="" class="my-form">
+                    {% csrf_token %}
+                    <input type="file" id="fileElem" multiple accept="image/*" onchange="uploadFile(this.files[0])">
+                    <label class="file-button" for="fileElem">
                 <i class="bi bi-upload"></i>
                 <style> i { -webkit-text-stroke: 1.5px; font-size: large; } </style>
                 Upload Image
               </label>
-            </form>
-            <p>or drop a file</p>
+                </form>
+                <p>or drop a file</p>
+            </div>
         </div>
-    </div>
-    <div class="bottom-div">
-        <p>Paste Image or URL &nbsp; <kbd>ctrl</kbd> + <kbd>v</kbd></p>
+        <div class="bottom-div">
+            <p>Paste Image or URL &nbsp; <kbd>ctrl</kbd> + <kbd>v</kbd></p>
+        </div>
     </div>
 </div>
 

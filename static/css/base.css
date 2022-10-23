@@ -27,7 +27,6 @@ p {
     width: min(80ch, 85%);
     border-radius: var(--div-radius);
     overflow: hidden;
-    margin-top: 7em;
     box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
 }
 
@@ -81,4 +80,27 @@ p {
     background: white;
     border: 1px solid hsl(0, 0%, 65%);
     color: black;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+body .row-section.header {
+    flex: 0 1 auto;
+    /* The above is shorthand for:
+    flex-grow: 0,
+    flex-shrink: 1,
+    flex-basis: auto
+    */
+}
+
+body .row-section.main-section {
+    flex: 1 1 auto;
+}
+
+body .row-section.footer {
+    flex: 0 1 40px;
 }
