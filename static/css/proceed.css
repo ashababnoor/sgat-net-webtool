@@ -6,3 +6,22 @@ button {
     color: grey;
     margin-bottom: 1em;
 }
+
+.no-color-btn {
+    background: transparent;
+    border: 2px solid hsl(213, 88%, 63%);
+    color: hsl(213, 88%, 63%);
+}
+
+.no-color-btn:hover {
+    background: hsl(213, 88%, 63%);
+}
+
+.file-button {
+    width: 18ch;
+    height: 4ch;
+    margin-inline: 0.75em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
