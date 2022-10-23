@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100%;
+    background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+}
+
+.main-container {}

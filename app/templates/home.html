@@ -1,19 +1,24 @@
-{% extends 'base.html' %}
-
-{% block content %}
-{% load static %}
+{% extends 'base.html' %} {% block content %} {% load static %}
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 
 
-<div id="drop-area">
-    <form class="my-form">
-        {% csrf_token %}
-      <p>Made with ❤️ by students of Group A2</p>
-      <input type="file" id="fileElem" multiple accept="image/*" onchange="uploadFile(this.files[0])">
-      <label class="button" for="fileElem">Select some files</label>
-    </form>
+<div id="drop-area" class="main-container">
+    <div class="glass-div">
+        <h1>Scene Description Generator</h1>
+        <p>Made with ❤️ by students of Group A2 </p>
+    </div>
+    <div class="main-div">
+        <form action="" class="my-form">
+            {% csrf_token %}
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="uploadFile(this.files[0])">
+            <label class="button" for="fileElem">Upload Image</label>
+        </form>
+        <p>or drop a file</p>
+    </div>
+    <div class="bottom-div">
+        <p>Paste Image or URL <kbd>ctrl</kbd> + <kbd>v</kbd></p>
+    </div>
 </div>
-
 
 <script src="{% static 'js/home.js' %}"></script>
 {% endblock content %}
