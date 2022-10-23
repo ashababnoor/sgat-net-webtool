@@ -13,6 +13,8 @@
 
 body {
     background-image: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 p {
@@ -22,7 +24,7 @@ p {
 .main-container {
     margin: auto;
     display: block;
-    width: 80ch;
+    width: min(80ch, 85%);
     border-radius: var(--div-radius);
     overflow: hidden;
     margin-top: 7em;
