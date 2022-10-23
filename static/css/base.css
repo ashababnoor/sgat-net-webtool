@@ -82,13 +82,17 @@ p {
     color: black;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     display: flex;
     flex-flow: column;
     height: 100%;
 }
 
-body .row-section.header {
+body .header {
     flex: 0 1 auto;
     /* The above is shorthand for:
     flex-grow: 0,
@@ -97,10 +101,15 @@ body .row-section.header {
     */
 }
 
-body .row-section.main-section {
+body .main-section {
     flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-body .row-section.footer {
-    flex: 0 1 40px;
+body .footer {
+    flex: 0 1 auto;
+    color: white;
+    text-align: center;
 }

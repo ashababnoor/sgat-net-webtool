@@ -22,12 +22,12 @@
         <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
                 <div class="container-fluid">
-                    <span class="navbar-brand mb-0 h1" style="color: white;">SGAT Net</span>
+                    <span class="navbar-brand mb-0 h1" style="color: white;"><a href="{% url 'home' %}">SGAT Net</a></span>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#" style=" font-size: 1.15rem; color: white;">About</a>
+                            <a href="{% url 'about' %}" class="nav-link active" aria-current="page" href="#" style=" font-size: 1.15rem; color: white;">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="https://github.com/ashababnoor/sgat-net-webtool" style="font-size: 1.15rem; color: white;">GitHub</a>
@@ -41,7 +41,7 @@
 
     {% block content %} {% endblock content %}
 
-    <footer class="footer row-section">
+    <footer class="footer row-section my-5">
         <p>A project of Department of CSE <br> <strong>United International University</strong></p>
     </footer>
 
