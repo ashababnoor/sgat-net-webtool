@@ -1,5 +1,50 @@
 {% extends 'base.html' %} {% block content %} {% load static %}
 <link rel="stylesheet" href="{% static 'css/about.css' %}">
 
+<div class="main-container">
+    <div class="glass-div" style="padding-block: 2em;">
+        <h2 class="mono-text input-text" style="margin-bottom: 0;">About this Project</h2>
+    </div>
+    <div class="main-div all-qa-div">
+        <div class="about-div">
+            <p>
+                This is an open-source web application that employs the SGAT-Net to understand an image and generate a proper caption. This project was built as a part of our Final Year Design Project at the Department of Computer Science and Engineering, United International
+                University.
+            </p>
+        </div>
+        <div class="qa-div left">
+            <div class="q-div">
+                <h3> What is Scene Understanding? </h3>
+            </div>
+            <div class="a-div">
+                <p>
+                    Scene understanding, in contrast to object recognition, attempts to analyze objects in context with respect to the 3D structure of the scene, its layout, and the spatial, functional, and semantic relationships between objects.
+                </p>
+            </div>
+        </div>
+        <div class="qa-div right">
+            <div class="q-div">
+                <h3> What are Scene Graphs? </h3>
+            </div>
+            <div class="a-div">
+                <p>
+                    Scene Graph is a type of knowledge graph which describes a scene. The scene graph is one kind of data structure that consists of object description, object attributes, and connections between them. Each object is considered a node and the relationships
+                    between objects are considered edges.
+                    <!-- The below image describes an image with it's scene graph. -->
+                </p>
+            </div>
+        </div>
+        <div class="qa-div left">
+            <div class="q-div">
+                <h3> What is the Attention mechanism? </h3>
+            </div>
+            <div class="a-div">
+                <p>
+                    Attention models, also known as attention mechanisms, are neural network input processing strategies that allow the network to focus on specific parts of a complicated input one by one until the entire dataset is categorized.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}

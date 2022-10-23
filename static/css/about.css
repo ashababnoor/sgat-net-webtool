@@ -1,0 +1,35 @@
+body {
+    display: block;
+}
+
+.main-container {
+    --div-width: 60ch;
+}
+
+.all-qa-div>div {
+    margin-block: 0.65em;
+    width: var(--div-width);
+}
+
+.about-div {
+    width: var(--div-width);
+    text-align: justify;
+}
+
+.about-div p {
+    text-align: center;
+}
+
+.left p,
+.left h3 {
+    text-align: left;
+}
+
+.right p,
+.right h3 {
+    text-align: right;
+}
+
+.footer {
+    padding-bottom: 3em;
+}

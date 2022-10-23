@@ -25,3 +25,7 @@ button {
     align-items: center;
     justify-content: center;
 }
+
+.main-container {
+    height: auto;
+}
